@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchanger</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen overflow-hidden">
+    <nav class="flex justify-between items-center px-8">
+        <img alt="logo-navbar">
+        <ul class="flex menu-navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Bank Currency</a></li>
+            <li><a href="#">Bank Reviews</a></li>
+            <li><a href="#">Currency info</a></li>
+        </ul>
+        <div class="flex items-center date-navbar">
+            <span class="icon"></span>
+            <div class="date-value text-lg flex flex-col">
+                <p class="date-normal font-bold">
+                </p>
+                <p class="date-UTC text-sm font-light">
+                </p>
+            </div>
+        </div>
+    </nav>
+    <section class="currency-converter inline-flex flex-col self-start px-8">
+        <div class="currency-header mt-12">
+            <h2 class="font-bold text-4xl">Currency Converter</h1>
+            <span class="mt-2 date-UTC-collapsed text-sm font-light"></span>
+        </div>
+        <div class="currency-wrapper w-full flex gap-16 justify-between self-center px-20">
+            <div class="currency origin w-2/5">
+                <span class="text-gray-600 font-thin">From</span>
+                <div class="currency-selector-wrapper w-full flex flex-col gap-10">
+                    <select class="currency-selector text-lg w-full h-14 pb-5 border-b-2 outline-none">
+                    </select>    
+                    <div class="currency-value">
+                        <input class="currency-from text-6xl outline-none text-gray-600" type="number" 
+                        min="0" step="0.01" placeholder="$ 0" required>
+                    </div>
+                </div>
+            </div>
+            <button class="convert-btn mt-5 icon rounded-full" title="Convert currency"></button>
+            <div class="currency origin w-2/5">
+                <span class="text-gray-600 font-thin">From</span>
+                <div class="currency-selector-wrapper w-full flex flex-col gap-10">
+                    <select class="currency-selector text-lg w-full h-14 pb-5 border-b-2 outline-none">
+                    </select>    
+                    <div class="currency-value">
+                        <input class="currency-to text-6xl outline-none text-gray-600" min='0'  type="number" placeholder="$ 0" readonly >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tables flex w-full h-2/5 mt-20">
+        <div class="flex flex-col w-1/2 items-center">
+            <h2 class="text-3xl">History of conversions</h2>
+            <div class="historic-table mt-10 grid grids-col-5">
+                <div class="historic-table-header grid grid-cols-5 justify-center">
+                    <span class="text-black font-bold w-32 text-center">Date</span>
+                    <span class="text-black font-bold w-32 text-center">From</span>
+                    <span class="text-black font-bold w-32 text-center">To</span>
+                    <span class="text-black font-bold w-32 text-center">Amount</span>
+                    <span class="text-black font-bold w-32 text-center">Value</span>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col w-1/2 items-center">
+            <h2 class="text-3xl">Popular exchange rates</h2>
+            <div class="rate-table mt-10 grid grids-col-3">
+                <div class="rate-table-header grid grid-cols-3 justify-center">
+                    <span class="text-black font-bold w-32 text-center">From</span>
+                    <span class="text-black font-bold w-32 text-center">To</span>
+                    <span class="text-black font-bold w-32 text-center">Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex w-full h-full justify-center">
+        <span class="font-semibold text-gray-700 mt-5">Made by Isaac Blanco</span>
+    </footer>
+    <script  src="../src/js/index.js"></script>
+</body>
+</html>
