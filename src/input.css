@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'iconos';
+  src: url("../../fonts/icons/icomoon.eot?gyfpy3");
+  src: url("../../fonts/icons/icomoon.eot?gyfpy3#iefix") format('embedded-opentype'), url("../../fonts/icons/icomoon.ttf?gyfpy3") format('truetype'), url("../../fonts/icons/icomoon.woff?gyfpy3") format('woff'), url("../../fonts/icons/icomoon.svg?gyfpy3#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body {
+  background: #fdfdfe;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  height: 70px;
+  border-bottom: 1px solid #a8b5c9;
+}
+nav .menu-navbar {
+  gap: 50px;
+  list-style: none;
+}
+nav .menu-navbar li {
+  font-size: 18px;
+  font-weight: 500;
+  color: #384955;
+}
+nav .menu-navbar li a {
+  text-decoration: none;
+  color: #384955;
+  transition: all 0.3s ease-in-out;
+  text-underline-offset: 26px;
+}
+nav .menu-navbar li a:hover {
+  color: #164cbc;
+  text-decoration: underline #164cbc 2px;
+}
+nav .date-navbar {
+  gap: 15px;
+}
+nav .date-navbar .icon:before {
+  font-family: 'iconos';
+  content: "\e904";
+  font-size: 18px;
+  color: #384955;
+  border: 15px solid #e5e5e5;
+  border-radius: 50%;
+}
+nav .date-navbar .date-value {
+  color: #384955;
+}
+nav .date-navbar .date-value .date-normal {
+  color: #384955;
+}
+.currency-converter {
+  gap: 50px;
+}
+.currency-converter .currency-header span {
+  color: #384955;
+}
+.currency-converter .currency-wrapper .currency-selector-wrapper .currency-selector {
+  transition: all 0.3s ease-in-out;
+}
+.currency-converter .currency-wrapper .currency-selector-wrapper .currency-selector:focus {
+  border-bottom: 1px solid #00f;
+}
+.currency-converter .currency-wrapper .convert-btn {
+  width: 50px;
+  height: 50px;
+  background: #164cbc;
+  border: 1px solid #164cbc;
+  transition: all 0.3s ease-in-out;
+}
+.currency-converter .currency-wrapper .convert-btn:after {
+  content: "\e901";
+  font-family: 'iconos';
+  color: #fff;
+}
+.currency-converter .currency-wrapper .convert-btn:hover {
+  background: #1a5ed8;
+  border: 1px solid #1a5ed8;
+  box-shadow: 0 0 0 15px #c4d6f7;
+}
+.currency-converter .currency-wrapper .currency-value input {
+  caret-color: #164cbc;
+}
+footer {
+  border-top: 1px solid #a8b5c9;
+}

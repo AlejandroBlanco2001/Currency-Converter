@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "stylus": "^0.59.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}

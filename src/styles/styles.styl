@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$blue = #164CBC
+$blue_hover = #1A5ED8
+$cream_white = #FDFDFE
+$clear_grey = #E5E5E5 
+$light_grey = #A8B5C9
+$strong_grey = #384955
+
+@font-face {
+  font-family: 'iconos';
+  src:  url('../../fonts/icons/icomoon.eot?gyfpy3');
+  src:  url('../../fonts/icons/icomoon.eot?gyfpy3#iefix') format('embedded-opentype'),
+    url('../../fonts/icons/icomoon.ttf?gyfpy3') format('truetype'),
+    url('../../fonts/icons/icomoon.woff?gyfpy3') format('woff'),
+    url('../../fonts/icons/icomoon.svg?gyfpy3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+  -webkit-appearance: none; 
+  margin: 0; 
+
+body 
+    background $cream_white
+    margin 0
+    padding 0
+
+nav
+    height 70px
+    border-bottom 1px solid $light_grey
+
+    .menu-navbar
+        gap: 50px
+        list-style: none
+
+        li
+            font-size: 18px
+            font-weight: 500
+            color: $strong_grey
+
+            a
+                text-decoration: none
+                color: $strong_grey
+                transition: all 0.3s ease-in-out
+                text-underline-offset 26px
+
+                &:hover
+                    color: $blue
+                    text-decoration underline $blue 2px
+
+    .date-navbar
+        gap 15px
+
+        .icon:before
+            font-family 'iconos'
+            content  "\e904"
+            font-size 18px
+            color $strong_grey
+            border 15px solid $clear_grey   
+            border-radius 50%
+
+        .date-value
+            color $strong_grey
+
+            .date-normal
+                color $strong_grey 
+
+.currency-converter
+    gap: 50px
+    .currency-header
+        span
+            color $strong_grey
+    .currency-wrapper
+        .currency-selector-wrapper
+                .currency-selector
+                    transition all 0.3s ease-in-out
+
+                .currency-selector:focus
+                    border-bottom 1px solid blue
+
+        .convert-btn
+            width 50px
+            height 50px
+            background $blue
+            border 1px solid $blue
+            transition: all 0.3s ease-in-out
+
+        .convert-btn:after
+            content  "\e901"
+            font-family 'iconos'
+            color white
+
+        .convert-btn:hover
+            background $blue_hover
+            border 1px solid $blue_hover
+            box-shadow: 0 0 0 15px #c4d6f7;
+
+        .currency-value
+            input
+                caret-color $blue
+footer
+    border-top: 1px solid $light_grey
